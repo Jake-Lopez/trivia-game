@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Knowledge Trivia Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧠 General Knowledge Trivia</h1>
+            <div class="score-board">
+                <span>Score: <span id="score">0</span></span>
+                <span>Question: <span id="current-question">1</span> of <span id="total-questions">10</span></span>
+            </div>
+        </header>
+
+        <main id="game-container">
+            <!-- Start Screen -->
+            <div id="start-screen" class="screen active">
+                <h2>Welcome to the Trivia Challenge!</h2>
+                <p>Test your general knowledge with 10 exciting questions covering various topics including science, history, geography, arts, and more!</p>
+                <button id="start-btn" class="btn btn-primary">Start Game</button>
+            </div>
+
+            <!-- Game Screen -->
+            <div id="game-screen" class="screen">
+                <div class="progress-bar">
+                    <div id="progress" class="progress-fill"></div>
+                </div>
+                
+                <div class="question-container">
+                    <h2 id="question-text">Loading question...</h2>
+                    <div id="answers-container" class="answers">
+                        <!-- Answer buttons will be inserted here -->
+                    </div>
+                </div>
+                
+                <div class="game-info">
+                    <div id="feedback" class="feedback"></div>
+                    <button id="next-btn" class="btn btn-secondary" style="display: none;">Next Question</button>
+                </div>
+            </div>
+
+            <!-- Results Screen -->
+            <div id="results-screen" class="screen">
+                <h2>🎉 Game Complete!</h2>
+                <div class="results">
+                    <div class="final-score">
+                        <span>Your Final Score:</span>
+                        <span id="final-score" class="score-large">0/10</span>
+                    </div>
+                    <div id="performance-message" class="performance"></div>
+                    <div class="results-actions">
+                        <button id="play-again-btn" class="btn btn-primary">Play Again</button>
+                        <button id="review-btn" class="btn btn-secondary">Review Answers</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review Screen -->
+            <div id="review-screen" class="screen">
+                <h2>📝 Answer Review</h2>
+                <div id="review-container">
+                    <!-- Review content will be inserted here -->
+                </div>
+                <button id="back-to-results-btn" class="btn btn-secondary">Back to Results</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
